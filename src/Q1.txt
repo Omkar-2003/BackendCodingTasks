@@ -1,7 +1,7 @@
 
 Q1:Mandatory : Elaborate what your internship or academic projects were?
-a. What did the system do?
 
+a. What did the system do?
 I worked on a Transport and Delivery Management Application for around 7 months.
 The system was built to optimize shipment scheduling at plant ports, where goods need to be loaded or unloaded.
 Each plant had multiple ports, and the key feature was to show real-time port availability,
