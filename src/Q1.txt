@@ -1,0 +1,77 @@
+
+Q1:Mandatory : Elaborate what your internship or academic projects were?
+a. What did the system do?
+
+I worked on a Transport and Delivery Management Application for around 7 months.
+The system was built to optimize shipment scheduling at plant ports, where goods need to be loaded or unloaded.
+Each plant had multiple ports, and the key feature was to show real-time port availability,
+allowing drivers to book available slots via a calendar interface.
+
+# SAP provided the base shipment data (e.g., delivery items, plant and port information).
+
+# Integration with SAP was handled using Apache Kafka, which made the data sync real-time.
+
+# Port slot selection and calendar booking were developed using Syncfusion Angular Library.
+
+# Twilio was used for real-time notification to assigned factory personnel when a booking was confirmed.
+
+# The system also allowed the factory team to manage peak loads better by seeing future slot bookings.
+
+# Tech stack: Angular (frontend), Spring Boot (backend), Kafka, Syncfusion (UI calendar), and Twilio (notifications).
+
+
+b. What other systems have you seen in the wild like that?
+# Dock scheduling systems like those used in  Maersk’s terminal booking tools.
+
+# BookMyShow Application and Hospital appointment systems with slot-based booking.
+
+# Parking management systems that allow booking slots based on live availability.
+
+
+
+c. How do you approach the development problem?
+# Understand domain logic (e.g., how ports function, how long each booking takes, what overlaps are allowed).
+
+# Build REST APIs in Spring Boot, test independently with Swagger,
+  interacted with business stakeholder and senior engineers inorder to understand the problem in better way.
+
+# Sync front-end using Angular service and display port status using the Syncfusion calendar.
+
+# Unit test and integration test using Postman and automation scripts.
+
+# Focused heavily on real-time data correctness for factory updates and consistent booking states.
+
+
+
+d. What were interesting aspects where you copied code from Stack Overflow?
+1) Database-related queries:
+# Working with JPA, I came across a complex issue where I needed to optimize queries using criteria API for fetching large datasets
+  with filtering and sorting.I found an efficient query structure on Stack Overflow that I customized for my application.
+  I found a Stack Overflow solution on pagination and query optimization using the @Query annotation and Spring Data JPA.
+
+2) Spring Boot annotations and configurations:
+# There were scenarios where Spring Boot auto-configuration didn’t work as expected or I had to manually wire up configurations
+  in a more complex way.Stack Overflow discussions on @ConfigurationProperties or @Bean definitions helped me resolve issues quickly.
+
+
+
+e. What did you learn from some very specific copy paste? Mention explicitly some of them.
+1)Avoiding Common Mistakes in Java Collections:
+# One instance where I copied code was related to using HashMap for a problem where the key was a complex object.
+  I learned a crucial lesson about properly implementing hashCode() and equals() methods for custom objects.
+# What I learned: If hashCode() and equals() are not overridden correctly, it leads to poor performance or even incorrect
+  behavior when using these objects as keys in a HashMap.
+
+2)Correct Usage of Lambda Expressions in Java 8:
+# While working on stream processing in Java 8, I often found solutions on Stack Overflow that utilized lambda expressions
+  and streams to optimize data processing.
+# What I learned: It was easy to misuse lambdas in a way that led to inefficient memory usage. For example, I learned the
+  importance of terminal vs intermediate operations in streams, and how using too many intermediate operations could lead to
+  performance bottlenecks. I also understood that using Collectors.toList() vs Collectors.toSet() can have a huge impact on
+  the results depending on the requirement.
+
+3) Error Handling and Logging in Java:
+# In one of my earlier projects, I was working on a custom exception hierarchy. I found code on Stack Overflow about logging
+  exceptions with SLF4J and Logback, which I adapted to log detailed stack traces in a more structured way.
+# What I learned: A well-organized logging system can significantly improve troubleshooting and debugging. I learned that logging
+  stack traces effectively and providing context (like request IDs or timestamps) was essential in production environments.
